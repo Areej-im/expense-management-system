@@ -2,7 +2,7 @@ import streamlit as st
 from datetime import datetime
 import requests
 
-API_URL = "https://expense-api-xyz.onrender.com"
+API_URL = "http://localhost:8000"
 
 def add_update_tab():
     selected_date = st.date_input("Enter Date ", datetime(2023, 8, 1), label_visibility="collapsed")
