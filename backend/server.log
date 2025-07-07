@@ -126,3 +126,8 @@
 2025-07-07 17:00:56,927 - db_helper - INFO - fetch_expenses_for_date called with 2023-08-01
 2025-07-07 17:01:00,507 - db_helper - INFO - fetch_expenses_for_date called with 2023-08-01
 2025-07-07 17:10:14,498 - db_helper - INFO - fetch_expenses_for_date called with 2023-08-01
+2025-07-07 17:52:30,371 - db_helper - INFO - fetch_expenses_for_date called with 2023-08-01
+2025-07-07 18:10:13,119 - db_helper - INFO - fetch_expenses_for_date called with 2023-08-01
+2025-07-07 18:10:22,213 - db_helper - INFO - fetch_expenses_for_date called with 2023-08-01
+2025-07-07 18:21:42,136 - db_helper - INFO - fetch_expenses_for_date called with 2023-08-01
+2025-07-07 18:36:15,834 - db_helper - INFO - fetch_expenses_for_date called with 2023-08-01
