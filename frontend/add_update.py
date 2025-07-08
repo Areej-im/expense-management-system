@@ -4,6 +4,11 @@ import requests
 
 API_URL = "http://localhost:8000"
 
+
+import os
+API_URL = os.getenv("API_URL", "http://your-api.com")
+
+
 def add_update_tab():
     selected_date = st.date_input("Enter Date ", datetime(2023, 8, 1), label_visibility="collapsed")
     response = requests.get(f"{API_URL}/expenses/{selected_date}")

@@ -6,6 +6,9 @@ import pandas  as pd
 
 API_URL = "http://localhost:8000"
 
+import os
+API_URL = os.getenv("API_URL", "http://your-api.com")
+
 
 def analytics_category_tab():
    col1,col2 = st.columns(2)
