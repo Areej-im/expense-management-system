@@ -3,9 +3,9 @@ st.write("App started...")
 
 
 import streamlit as st
-from .add_update import add_update_tab
-from .analytics_by_category import  analytics_category_tab
-from .analytics_by_months import  anlystics_months_tab
+from add_update import add_update_tab
+from analytics_by_category import  analytics_category_tab
+from analytics_by_months import  anlystics_months_tab
 
 
 st.title("Expense Tracking System")
