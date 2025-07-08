@@ -60,3 +60,6 @@ def add_update_tab():
             st.success("Expenses updated successfully!")
         else:
             st.error("Failed to update expenses")
+
+
+st.write("Finished loading data")

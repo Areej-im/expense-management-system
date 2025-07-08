@@ -36,3 +36,4 @@ def anlystics_months_tab():
         st.table(df_stored)
 
 
+st.write("Finished loading data")

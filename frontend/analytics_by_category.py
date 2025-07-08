@@ -43,6 +43,6 @@ def analytics_category_tab():
       df_stored["Percentage"] = df_stored["Percentage"].map("{:.2f}%".format)
 
       st.table(df_stored)
-
+st.write("Finished loading data")
 
 
