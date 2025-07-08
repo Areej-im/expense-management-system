@@ -4,7 +4,15 @@ import db_helper
 from typing import List
 from pydantic import BaseModel
 
+
+
 app = FastAPI()
+
+
+@app.get("/")
+def read_root():
+    return {"msg": "Hello from FastAPI"}
+
 
 
 class Expense(BaseModel):
@@ -16,8 +24,6 @@ class Expense(BaseModel):
 class DateRange(BaseModel):
     start_date: date
     end_date: date
-
-
 
 
 @app.get("/expenses/{expense_date}", response_model=List[Expense])
