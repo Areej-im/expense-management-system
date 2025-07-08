@@ -2,11 +2,11 @@ import streamlit as st
 from datetime import datetime
 import requests
 
-API_URL = "http://localhost:8000"
+#API_URL = "http://localhost:8000"
 
 
 import os
-API_URL = os.getenv("API_URL", "http://your-api.com")
+API_URL = os.getenv("API_URL", "https://expense-api-85gl.onrender.com")
 
 
 def add_update_tab():
