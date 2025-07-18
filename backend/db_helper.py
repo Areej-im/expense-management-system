@@ -2,14 +2,16 @@ import mysql.connector
 from contextlib import contextmanager
 from logging_setup import setup_logger
 
-logger = setup_logger("db_helper")
+
+logger = setup_logger('db_helper')
+
 
 @contextmanager
 def get_db_cursor(commit=False):
     connection = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="ARhiupNa6#@5",
+        password="root",
         database="expense_manager"
     )
 
@@ -58,27 +60,8 @@ def fetch_expense_summary(start_date, end_date):
         return data
 
 
-
-
-def fetch_monthly_summary():
-    query = """
-        SELECT
-            MONTH(expense_date) AS month_number,
-            MONTHNAME(expense_date) AS month_name,
-            SUM(amount) AS total
-        FROM expenses
-        GROUP BY month_number, month_name
-        ORDER BY month_number
-    """
-    with get_db_cursor() as cursor:
-        cursor.execute(query)
-        data2 = cursor.fetchall()
-    return data2
-
-
-
 if __name__ == "__main__":
-    expenses = fetch_expenses_for_date("2024-08-01")
+    expenses = fetch_expenses_for_date("2024-09-30")
     print(expenses)
     # delete_expenses_for_date("2024-08-25")
     summary = fetch_expense_summary("2024-08-01", "2024-08-05")
