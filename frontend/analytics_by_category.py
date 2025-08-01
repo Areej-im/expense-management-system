@@ -2,12 +2,14 @@ import streamlit as st
 from datetime import datetime
 import requests
 import pandas as pd
+from export_utils import download_df_as_excel
 
 
-API_URL = "http://localhost:8000"
+
+API_URL = "http://localhost:8010"
 
 
-def analytics_tab():
+def analytics_category_tab():
     col1, col2 = st.columns(2)
     with col1:
         start_date = st.date_input("Start Date", datetime(2024, 8, 1))
@@ -41,4 +43,4 @@ def analytics_tab():
         df_sorted["Percentage"] = df_sorted["Percentage"].map("{:.2f}".format)
 
         st.table(df_sorted)
-
+        download_df_as_excel(df_sorted, "category_analytics.xlsx", "Download Excel Report")

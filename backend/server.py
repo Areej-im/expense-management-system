@@ -1,6 +1,7 @@
 from fastapi import FastAPI, HTTPException
 from datetime import date
-import db_helper
+#import db_helper
+from backend import db_helper
 from typing import List
 from pydantic import BaseModel
 
@@ -53,3 +54,13 @@ def get_analytics(date_range: DateRange):
         }
 
     return breakdown
+
+
+
+@app.get("/monthly_summary/")
+def get_analytics():
+    monthly_summary = db_helper.fetch_monthly_expense_summary()
+    if monthly_summary is None:
+        raise HTTPException(status_code=500, detail="Failed to retrieve monthly expense summary from the database.")
+
+    return monthly_summary
